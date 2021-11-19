@@ -10,4 +10,4 @@ def process():
     inputString = request.get_json(force=True)['text']
     allLower = inputString.lower()
     allUpper = inputString.upper()
-    return jsonify({'lower case': allLower, 'upper case': allUpper})
+    return jsonify({'original': inputString, 'lower case': allLower, 'upper case': allUpper})
