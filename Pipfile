@@ -4,8 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+nrclex = "*"
+nltk = "*"
+numpy = "*"
 
 [dev-packages]
+black = "*"
 
 [requires]
 python_version = "3.10"
+
+[pipenv]
+allow_prereleases = true
