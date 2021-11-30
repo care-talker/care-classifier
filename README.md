@@ -9,15 +9,23 @@ Care-Talker is an educational project providing teachers and educators with the 
 # Install:
 
 run
+
 `pipenv install`
+
 within the environment run
+
 `python install-data.py`
+
 run
+
 `flask run`
+
 test with postman
 
 # Routes:
 
 get /: returns greeting
+
 post /test: `body: { "text" : string }` returns string in all caps and all lowercase
+
 post /classify: `body: { "text" : string }` returns emotional classification, confidence, additional top emotional cues, and processed words.
