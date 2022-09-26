@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "care-classifier"
+version = "0.1.0"
+description = ""
+authors = ["supersweet-dev <pentagr4mi@gmail.com>"]
+readme = "README.md"
+packages = [{include = "care_classifier"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.2"
+strawberry-graphql = {extras = ["debug-server"], version = "^0.132.1"}
+Django = "^4.1.1"
+numpy = "^1.23.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
