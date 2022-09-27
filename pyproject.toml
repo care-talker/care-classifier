@@ -10,7 +10,6 @@ packages = [{include = "care_classifier"}]
 python = "^3.10"
 Flask = "^2.2.2"
 strawberry-graphql = {extras = ["debug-server"], version = "^0.132.1"}
-numpy = "^1.23.3"
 strawberry-graphql-django = "^0.5.1"
 Django = "^4.1.1"
 
