@@ -63,6 +63,17 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-uwsgi"
+version = "0.2.2"
+description = "uWSGI stuff for Django projects"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+uwsgi = ["uwsgi"]
+
+[[package]]
 name = "Flask"
 version = "2.2.2"
 description = "A simple framework for building complex web applications."
@@ -280,6 +291,14 @@ h11 = ">=0.8"
 standard = ["colorama (>=0.4)", "httptools (>=0.4.0)", "python-dotenv (>=0.13)", "pyyaml (>=5.1)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "watchfiles (>=0.13)", "websockets (>=10.0)"]
 
 [[package]]
+name = "uWSGI"
+version = "2.0.20"
+description = "The uWSGI server"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "Werkzeug"
 version = "2.2.2"
 description = "The comprehensive WSGI web application library."
@@ -296,7 +315,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "9cfe2b13e1d233af52b96cf8b065b22a8dff06e0eb7abdd00b7042bb8a9c1ead"
+content-hash = "1b303d7e90c18ec1dd4b07b607dc3c88d815c956b03c8a37f6bacb70d16df20a"
 
 [metadata.files]
 anyio = [
@@ -318,6 +337,10 @@ colorama = [
 Django = [
     {file = "Django-4.1.1-py3-none-any.whl", hash = "sha256:acb21fac9275f9972d81c7caf5761a89ec3ea25fe74545dd26b8a48cb3a0203e"},
     {file = "Django-4.1.1.tar.gz", hash = "sha256:a153ffd5143bf26a877bfae2f4ec736ebd8924a46600ca089ad96b54a1d4e28e"},
+]
+django-uwsgi = [
+    {file = "django-uwsgi-0.2.2.tar.gz", hash = "sha256:eadbc34f5c4e3bd54b65717bc91411501327f3a94dd2607e587d7e5aeb5dda3c"},
+    {file = "django_uwsgi-0.2.2-py3-none-any.whl", hash = "sha256:921fb5547e1c5edc740019ba65e0f066448f99730f4194c4ba736b40333de23f"},
 ]
 Flask = [
     {file = "Flask-2.2.2-py3-none-any.whl", hash = "sha256:b9c46cc36662a7949f34b52d8ec7bb59c0d74ba08ba6cb9ce9adc1d8676d9526"},
@@ -431,6 +454,9 @@ tzdata = [
 uvicorn = [
     {file = "uvicorn-0.18.3-py3-none-any.whl", hash = "sha256:0abd429ebb41e604ed8d2be6c60530de3408f250e8d2d84967d85ba9e86fe3af"},
     {file = "uvicorn-0.18.3.tar.gz", hash = "sha256:9a66e7c42a2a95222f76ec24a4b754c158261c4696e683b9dadc72b590e0311b"},
+]
+uWSGI = [
+    {file = "uwsgi-2.0.20.tar.gz", hash = "sha256:88ab9867d8973d8ae84719cf233b7dafc54326fcaec89683c3f9f77c002cdff9"},
 ]
 Werkzeug = [
     {file = "Werkzeug-2.2.2-py3-none-any.whl", hash = "sha256:f979ab81f58d7318e064e99c4506445d60135ac5cd2e177a2de0089bfd4c9bd5"},

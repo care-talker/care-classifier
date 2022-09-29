@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "very-secret-key"
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.170','nidhoggr.net','www.nidhoggr.net','dev.nidhoggr.net','base.nidhoggr.net','24.243.109.139']
 
 INSTALLED_APPS = [
     "django.contrib.auth",
