@@ -13,4 +13,4 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ secrets.SSH_PORT }}
-        script: cd ${{ secrets.CARE_DIRECTORY }} && sudo git pull && sudo rm -rf carescripts/migrations/ && poetry run ./manage.py  migrate --run-syncdb carescripts &&  poetry run ./manage.py loaddata lessons && sudo shutdown -r +1
+        script: cd ${{ secrets.CARE_DIRECTORY }} && sudo git pull && sudo rm -rf carescripts/migrations/ && poetry run ./manage.py  migrate --run-syncdb &&  poetry run ./manage.py loaddata lessons && sudo shutdown -r +1
