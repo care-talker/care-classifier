@@ -12,14 +12,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name="fruit",
-            name="color",
+            model_name="lesson",
+            name="subject",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                related_name="fruits",
-                to="carescripts.color",
+                related_name="lessons",
+                to="carescripts.subject",
             ),
         ),
     ]

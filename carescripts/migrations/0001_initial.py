@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Color",
+            name="Subject",
             fields=[
                 (
                     "id",
@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name="Fruit",
+            name="Lesson",
             fields=[
                 (
                     "id",
@@ -40,11 +40,11 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=20)),
                 (
-                    "color",
+                    "subject",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name="fruits",
-                        to="carescripts.color",
+                        related_name="lessons",
+                        to="carescripts.subject",
                     ),
                 ),
             ],

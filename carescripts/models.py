@@ -1,16 +1,16 @@
 from django.db import models
 
 
-class Fruit(models.Model):
+class Lesson(models.Model):
     name = models.CharField(max_length=20)
-    color = models.ForeignKey(
-        "Color",
+    subject = models.ForeignKey(
+        "Subject",
         blank=True,
         null=True,
-        related_name="fruits",
+        related_name="lessons",
         on_delete=models.CASCADE,
     )
 
 
-class Color(models.Model):
+class Subject(models.Model):
     name = models.CharField(max_length=20)

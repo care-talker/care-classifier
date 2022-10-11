@@ -7,12 +7,12 @@ import strawberry_django.auth as auth
 from strawberry_django import mutations
 
 from .types import (
-    Color,
-    ColorInput,
-    ColorPartialInput,
-    Fruit,
-    FruitInput,
-    FruitPartialInput,
+    Subject,
+    SubjectInput,
+    SubjectPartialInput,
+    Lesson,
+    LessonInput,
+    LessonPartialInput,
     User,
     UserInput,
 )
@@ -20,24 +20,24 @@ from .types import (
 
 @strawberry.type
 class Query:
-    fruit: Fruit = strawberry_django.field()
-    fruits: List[Fruit] = strawberry_django.field()
+    lesson: Lesson = strawberry_django.field()
+    lessons: List[Lesson] = strawberry_django.field()
 
-    color: Color = strawberry_django.field()
-    colors: List[Color] = strawberry_django.field()
+    subject: Subject = strawberry_django.field()
+    subjects: List[Subject] = strawberry_django.field()
 
 
 @strawberry.type
 class Mutation:
-    createFruit: Fruit = mutations.create(FruitInput)
-    createFruits: List[Fruit] = mutations.create(FruitInput)
-    updateFruits: List[Fruit] = mutations.update(FruitPartialInput)
-    deleteFruits: List[Fruit] = mutations.delete()
+    createLesson: Lesson = mutations.create(LessonInput)
+    createLessons: List[Lesson] = mutations.create(LessonInput)
+    updateLessons: List[Lesson] = mutations.update(LessonPartialInput)
+    deleteLessons: List[Lesson] = mutations.delete()
 
-    createColor: Color = mutations.create(ColorInput)
-    createColors: List[Color] = mutations.create(ColorInput)
-    updateColors: List[Color] = mutations.update(ColorPartialInput)
-    deleteColors: List[Color] = mutations.delete()
+    createSubject: Subject = mutations.create(SubjectInput)
+    createSubjects: List[Subject] = mutations.create(SubjectInput)
+    updateSubjects: List[Subject] = mutations.update(SubjectPartialInput)
+    deleteSubjects: List[Subject] = mutations.delete()
 
     register: User = auth.register(UserInput)
 

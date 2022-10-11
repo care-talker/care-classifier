@@ -1,0 +1,40 @@
+[
+{
+  "model": "carescripts.lesson",
+  "pk": 1,
+  "fields": {
+    "name": "calculus",
+    "subject": 1
+  }
+},
+{
+  "model": "carescripts.lesson",
+  "pk": 2,
+  "fields": {
+    "name": "algebra",
+    "subject": 1
+  }
+},
+{
+  "model": "carescripts.lesson",
+  "pk": 3,
+  "fields": {
+    "name": "anatomy",
+    "subject": 2
+  }
+},
+{
+  "model": "carescripts.subject",
+  "pk": 1,
+  "fields": {
+    "name": "math"
+  }
+},
+{
+  "model": "carescripts.subject",
+  "pk": 2,
+  "fields": {
+    "name": "biology"
+  }
+}
+]

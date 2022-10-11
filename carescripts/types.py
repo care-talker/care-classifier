@@ -11,54 +11,54 @@ from . import models
 # filters
 
 
-@strawberry_django.filters.filter(models.Fruit, lookups=True)
-class FruitFilter:
+@strawberry_django.filters.filter(models.Lesson, lookups=True)
+class LessonFilter:
     id: auto
     name: auto
-    color: "ColorFilter"
+    subject: "SubjectFilter"
 
 
-@strawberry_django.filters.filter(models.Color, lookups=True)
-class ColorFilter:
+@strawberry_django.filters.filter(models.Subject, lookups=True)
+class SubjectFilter:
     id: auto
     name: auto
-    fruits: FruitFilter
+    lessons: LessonFilter
 
 
 # order
 
 
-@strawberry_django.ordering.order(models.Fruit)
-class FruitOrder:
+@strawberry_django.ordering.order(models.Lesson)
+class LessonOrder:
     name: auto
-    color: "ColorOrder"
+    subject: "SubjectOrder"
 
 
-@strawberry_django.ordering.order(models.Color)
-class ColorOrder:
+@strawberry_django.ordering.order(models.Subject)
+class SubjectOrder:
     name: auto
-    fruit: FruitOrder
+    lesson: LessonOrder
 
 
 # types
 
 
 @strawberry_django.type(
-    models.Fruit, filters=FruitFilter, order=FruitOrder, pagination=True
+    models.Lesson, filters=LessonFilter, order=LessonOrder, pagination=True
 )
-class Fruit:
+class Lesson:
     id: auto
     name: auto
-    color: "Color"
+    subject: "Subject"
 
 
 @strawberry_django.type(
-    models.Color, filters=ColorFilter, order=ColorOrder, pagination=True
+    models.Subject, filters=SubjectFilter, order=SubjectOrder, pagination=True
 )
-class Color:
+class Subject:
     id: auto
     name: auto
-    fruits: List[Fruit]
+    lessons: List[Lesson]
 
 
 @strawberry_django.type(get_user_model())
@@ -72,18 +72,18 @@ class User:
 # input types
 
 
-@strawberry_django.input(models.Fruit)
-class FruitInput:
+@strawberry_django.input(models.Lesson)
+class LessonInput:
     id: auto
     name: auto
-    color: auto
+    subject: auto
 
 
-@strawberry_django.input(models.Color)
-class ColorInput:
+@strawberry_django.input(models.Subject)
+class SubjectInput:
     id: auto
     name: auto
-    fruits: auto
+    lessons: auto
 
 
 @strawberry_django.input(get_user_model())
@@ -96,11 +96,11 @@ class UserInput:
 # partial input types
 
 
-@strawberry_django.input(models.Fruit, partial=True)
-class FruitPartialInput(FruitInput):
+@strawberry_django.input(models.Lesson, partial=True)
+class LessonPartialInput(LessonInput):
     pass
 
 
-@strawberry_django.input(models.Color, partial=True)
-class ColorPartialInput(ColorInput):
+@strawberry_django.input(models.Subject, partial=True)
+class SubjectPartialInput(SubjectInput):
     pass

@@ -13,4 +13,4 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ secrets.SSH_PORT }}
-        script: cd ${{ secrets.CARE_DIRECTORY }} && sudo git pull
+        script: cd ${{ secrets.CARE_DIRECTORY }} && sudo git pull && sudo reboot
