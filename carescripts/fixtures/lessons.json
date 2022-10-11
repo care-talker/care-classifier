@@ -9,6 +9,22 @@
 },
 {
   "model": "carescripts.lesson",
+  "pk": 1,
+  "fields": {
+    "name": "linear",
+    "subject": 1
+  }
+},
+{
+  "model": "carescripts.lesson",
+  "pk": 1,
+  "fields": {
+    "name": "micro",
+    "subject": 2
+  }
+},
+{
+  "model": "carescripts.lesson",
   "pk": 2,
   "fields": {
     "name": "algebra",
