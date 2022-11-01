@@ -14,3 +14,13 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ secrets.SSH_PORT }}
         script: cd ${{ secrets.CARE_DIRECTORY }} && sudo git pull && sudo rm -rf carescripts/migrations/ && poetry update && poetry run ./manage.py  migrate --run-syncdb &&  poetry run ./manage.py loaddata lessons && sudo shutdown -r +1
+    - name: Wait for Redeploy
+      run: sleep 300s
+      shell: bash
+    - name: checking deployment
+      uses: fjogeleit/http-request-action@v1
+      with:
+        url: 'http://dev.nidhoggr.net/graphql'
+        method: 'POST'
+        customHeaders: '{"Content-Type": "application/json"}'
+        data: '{"query":"query MyQuery {\n  lessons {\n    name\n  }\n}","variables":{}}'
