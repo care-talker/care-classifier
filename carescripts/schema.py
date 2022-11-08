@@ -29,13 +29,13 @@ class Query:
 
 @strawberry.type
 class Mutation:
-    createLesson: Lesson = mutations.create(LessonInput)
-    createLessons: List[Lesson] = mutations.create(LessonInput)
+    createLesson: Lesson = mutations.create(LessonPartialInput)
+    createLessons: List[Lesson] = mutations.create(LessonPartialInput)
     updateLessons: List[Lesson] = mutations.update(LessonPartialInput)
     deleteLessons: List[Lesson] = mutations.delete()
 
-    createSubject: Subject = mutations.create(SubjectInput)
-    createSubjects: List[Subject] = mutations.create(SubjectInput)
+    createSubject: Subject = mutations.create(SubjectPartialInput)
+    createSubjects: List[Subject] = mutations.create(SubjectPartialInput)
     updateSubjects: List[Subject] = mutations.update(SubjectPartialInput)
     deleteSubjects: List[Subject] = mutations.delete()
 
