@@ -1,0 +1,62 @@
+[
+    {
+        "model": "carescripts.lesson",
+        "pk": 400,
+        "fields": {
+            "name": "tetris 101",
+            "subject": 400
+        }
+    },
+    {
+        "model": "carescripts.subject",
+        "pk": 400,
+        "fields": {
+            "name": "puzzle games"
+        }
+    },
+    {
+        "model": "carescripts.question",
+        "pk": 402,
+        "fields": {
+            "text": "\nWhich of these is not a tetromino?\na) J\nb) L\nc) P\nd) I\n",
+            "answer": "c",
+            "lesson": "400"
+        }
+    },
+    {
+        "model": "carescripts.question",
+        "pk": 403,
+        "fields": {
+            "text": "\nWhich of these moves scores higher?\na) teris (4-line clear)\nb) simple t-spin (2 line clear)\n",
+            "answer": "b",
+            "lesson": "400"
+        }
+    },
+    {
+        "model": "carescripts.question",
+        "pk": 401,
+        "fields": {
+            "text": "\nHow many units are in a tetromino?\n",
+            "answer": "4",
+            "lesson": "400"
+        }
+    },
+    {
+        "model": "carescripts.question",
+        "pk": 404,
+        "fields": {
+            "text": "\nWhat is the optimal unit size for a well strategy?\n",
+            "answer": "4",
+            "lesson": "400"
+        }
+    },
+    {
+        "model": "carescripts.question",
+        "pk": 4015,
+        "fields": {
+            "text": "\nWhich strategy is more versatile?\na) combo setup\nb) tetris setup\n",
+            "answer": "a",
+            "lesson": "400"
+        }
+    }
+]

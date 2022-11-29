@@ -4,12 +4,15 @@ from strawberry import auto
 import strawberry_django
 from . import models
 
+
 @strawberry_django.type(get_user_model())
 class User:
     id: auto
     username: auto
     password: auto
     email: auto
+
+
 @strawberry_django.input(get_user_model())
 class UserInput:
     username: auto
@@ -110,7 +113,6 @@ class SessionFilter:
     endDate: auto
 
 
-
 # orders
 @strawberry_django.ordering.order(models.Skill)
 class SkillOrder:
@@ -193,7 +195,6 @@ class SessionOrder:
     endDate: auto
 
 
-
 # types
 @strawberry_django.type(
     models.Skill, filters=SkillFilter, order=SkillOrder, pagination=True
@@ -225,18 +226,34 @@ class Subject:
 
 
 @strawberry_django.type(
+    models.Question, filters=QuestionFilter, order=QuestionOrder, pagination=True
+)
+class Question:
+    id: auto
+    text: auto
+    mode: "Mode"
+    lesson: "Lesson"
+    answer: auto
+    expectation: "Expectation"
+    objective: "LearningObjective"
+
+
+@strawberry_django.type(
     models.Lesson, filters=LessonFilter, order=LessonOrder, pagination=True
 )
 class Lesson:
     id: auto
     name: auto
-    subject: Subject
-    questions: "Question"
+    subject: "Subject"
+    questions: List[Question]
     assignments: "Assignment"
 
 
 @strawberry_django.type(
-    models.Expectation, filters=ExpectationFilter, order=ExpectationOrder, pagination=True
+    models.Expectation,
+    filters=ExpectationFilter,
+    order=ExpectationOrder,
+    pagination=True,
 )
 class Expectation:
     id: auto
@@ -246,7 +263,10 @@ class Expectation:
 
 
 @strawberry_django.type(
-    models.LearningObjective, filters=LearningObjectiveFilter, order=LearningObjectiveOrder, pagination=True
+    models.LearningObjective,
+    filters=LearningObjectiveFilter,
+    order=LearningObjectiveOrder,
+    pagination=True,
 )
 class LearningObjective:
     id: auto
@@ -265,19 +285,6 @@ class Mode:
 
 
 @strawberry_django.type(
-    models.Question, filters=QuestionFilter, order=QuestionOrder, pagination=True
-)
-class Question:
-    id: auto
-    text: auto
-    mode: Mode
-    lesson: Lesson
-    answer: auto
-    expectation: Expectation
-    objective: LearningObjective
-
-
-@strawberry_django.type(
     models.Assignment, filters=AssignmentFilter, order=AssignmentOrder, pagination=True
 )
 class Assignment:
@@ -290,7 +297,10 @@ class Assignment:
 
 
 @strawberry_django.type(
-    models.UserAssignment, filters=UserAssignmentFilter, order=UserAssignmentOrder, pagination=True
+    models.UserAssignment,
+    filters=UserAssignmentFilter,
+    order=UserAssignmentOrder,
+    pagination=True,
 )
 class UserAssignment:
     id: auto
@@ -307,7 +317,6 @@ class Session:
     userAssignment: UserAssignment
     startDate: auto
     endDate: auto
-
 
 
 # input types
@@ -403,47 +412,56 @@ class SessionInput:
     endDate: auto
 
 
-
 # partial inputs
 @strawberry_django.input(models.Skill, partial=True)
 class SkillPartialInput(SkillInput):
     pass
 
+
 @strawberry_django.input(models.UserSkill, partial=True)
 class UserSkillPartialInput(UserSkillInput):
     pass
+
 
 @strawberry_django.input(models.Subject, partial=True)
 class SubjectPartialInput(SubjectInput):
     pass
 
+
 @strawberry_django.input(models.Lesson, partial=True)
 class LessonPartialInput(LessonInput):
     pass
+
 
 @strawberry_django.input(models.Expectation, partial=True)
 class ExpectationPartialInput(ExpectationInput):
     pass
 
+
 @strawberry_django.input(models.LearningObjective, partial=True)
 class LearningObjectivePartialInput(LearningObjectiveInput):
     pass
+
 
 @strawberry_django.input(models.Mode, partial=True)
 class ModePartialInput(ModeInput):
     pass
 
+
 @strawberry_django.input(models.Question, partial=True)
 class QuestionPartialInput(QuestionInput):
     pass
+
 
 @strawberry_django.input(models.Assignment, partial=True)
 class AssignmentPartialInput(AssignmentInput):
     pass
 
+
 @strawberry_django.input(models.UserAssignment, partial=True)
 class UserAssignmentPartialInput(UserAssignmentInput):
     pass
+
 
 @strawberry_django.input(models.Session, partial=True)
 class SessionPartialInput(SessionInput):
