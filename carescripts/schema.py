@@ -1,45 +1,80 @@
 from typing import List
-
 import strawberry
-
 import strawberry_django
 import strawberry_django.auth as auth
 from strawberry_django import mutations
-
-from .types import (
-    Subject,
-    SubjectInput,
-    SubjectPartialInput,
-    Lesson,
-    LessonInput,
-    LessonPartialInput,
-    User,
-    UserInput,
-)
-
-
+from .types import *
 @strawberry.type
 class Query:
-    lesson: Lesson = strawberry_django.field()
-    lessons: List[Lesson] = strawberry_django.field()
-
+    skill: Skill = strawberry_django.field()
+    skills: List[Skill] = strawberry_django.field()
+    userSkill: UserSkill = strawberry_django.field()
+    userSkills: List[UserSkill] = strawberry_django.field()
     subject: Subject = strawberry_django.field()
     subjects: List[Subject] = strawberry_django.field()
-
+    lesson: Lesson = strawberry_django.field()
+    lessons: List[Lesson] = strawberry_django.field()
+    expectation: Expectation = strawberry_django.field()
+    expectations: List[Expectation] = strawberry_django.field()
+    learningObjective: LearningObjective = strawberry_django.field()
+    learningObjectives: List[LearningObjective] = strawberry_django.field()
+    mode: Mode = strawberry_django.field()
+    modes: List[Mode] = strawberry_django.field()
+    question: Question = strawberry_django.field()
+    questions: List[Question] = strawberry_django.field()
+    assignment: Assignment = strawberry_django.field()
+    assignments: List[Assignment] = strawberry_django.field()
+    userAssignment: UserAssignment = strawberry_django.field()
+    userAssignments: List[UserAssignment] = strawberry_django.field()
+    session: Session = strawberry_django.field()
+    sessions: List[Session] = strawberry_django.field()
 
 @strawberry.type
 class Mutation:
-    createLesson: Lesson = mutations.create(LessonPartialInput)
-    createLessons: List[Lesson] = mutations.create(LessonPartialInput)
-    updateLessons: List[Lesson] = mutations.update(LessonPartialInput)
-    deleteLessons: List[Lesson] = mutations.delete()
-
+    register: User = auth.register(UserInput)
+    createSkill: Skill = mutations.create(SkillPartialInput)
+    createSkills: List[Skill] = mutations.create(SkillPartialInput)
+    updateSkills: List[Skill] = mutations.update(SkillPartialInput)
+    deleteSkills: List[Skill] = mutations.delete()
+    createUserSkill: UserSkill = mutations.create(UserSkillPartialInput)
+    createUserSkills: List[UserSkill] = mutations.create(UserSkillPartialInput)
+    updateUserSkills: List[UserSkill] = mutations.update(UserSkillPartialInput)
+    deleteUserSkills: List[UserSkill] = mutations.delete()
     createSubject: Subject = mutations.create(SubjectPartialInput)
     createSubjects: List[Subject] = mutations.create(SubjectPartialInput)
     updateSubjects: List[Subject] = mutations.update(SubjectPartialInput)
     deleteSubjects: List[Subject] = mutations.delete()
-
-    register: User = auth.register(UserInput)
-
+    createLesson: Lesson = mutations.create(LessonPartialInput)
+    createLessons: List[Lesson] = mutations.create(LessonPartialInput)
+    updateLessons: List[Lesson] = mutations.update(LessonPartialInput)
+    deleteLessons: List[Lesson] = mutations.delete()
+    createExpectation: Expectation = mutations.create(ExpectationPartialInput)
+    createExpectations: List[Expectation] = mutations.create(ExpectationPartialInput)
+    updateExpectations: List[Expectation] = mutations.update(ExpectationPartialInput)
+    deleteExpectations: List[Expectation] = mutations.delete()
+    createLearningObjective: LearningObjective = mutations.create(LearningObjectivePartialInput)
+    createLearningObjectives: List[LearningObjective] = mutations.create(LearningObjectivePartialInput)
+    updateLearningObjectives: List[LearningObjective] = mutations.update(LearningObjectivePartialInput)
+    deleteLearningObjectives: List[LearningObjective] = mutations.delete()
+    createMode: Mode = mutations.create(ModePartialInput)
+    createModes: List[Mode] = mutations.create(ModePartialInput)
+    updateModes: List[Mode] = mutations.update(ModePartialInput)
+    deleteModes: List[Mode] = mutations.delete()
+    createQuestion: Question = mutations.create(QuestionPartialInput)
+    createQuestions: List[Question] = mutations.create(QuestionPartialInput)
+    updateQuestions: List[Question] = mutations.update(QuestionPartialInput)
+    deleteQuestions: List[Question] = mutations.delete()
+    createAssignment: Assignment = mutations.create(AssignmentPartialInput)
+    createAssignments: List[Assignment] = mutations.create(AssignmentPartialInput)
+    updateAssignments: List[Assignment] = mutations.update(AssignmentPartialInput)
+    deleteAssignments: List[Assignment] = mutations.delete()
+    createUserAssignment: UserAssignment = mutations.create(UserAssignmentPartialInput)
+    createUserAssignments: List[UserAssignment] = mutations.create(UserAssignmentPartialInput)
+    updateUserAssignments: List[UserAssignment] = mutations.update(UserAssignmentPartialInput)
+    deleteUserAssignments: List[UserAssignment] = mutations.delete()
+    createSession: Session = mutations.create(SessionPartialInput)
+    createSessions: List[Session] = mutations.create(SessionPartialInput)
+    updateSessions: List[Session] = mutations.update(SessionPartialInput)
+    deleteSessions: List[Session] = mutations.delete()
 
 schema = strawberry.Schema(query=Query, mutation=Mutation)
