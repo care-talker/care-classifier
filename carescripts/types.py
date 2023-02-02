@@ -83,6 +83,8 @@ class QuestionFilter:
     mode: ModeFilter
     lesson: LessonFilter
     answer: auto
+    title: auto
+
     expectation: ExpectationFilter
     objective: LearningObjectiveFilter
 
@@ -168,6 +170,8 @@ class QuestionOrder:
     mode: ModeOrder
     lesson: LessonOrder
     answer: auto
+    title: auto
+
     expectation: ExpectationOrder
     objective: LearningObjectiveOrder
 
@@ -234,6 +238,8 @@ class Question:
     mode: "Mode"
     lesson: "Lesson"
     answer: auto
+    title: auto
+
     expectation: "Expectation"
     objective: "LearningObjective"
 
@@ -382,6 +388,8 @@ class QuestionInput:
     mode: auto
     lesson: auto
     answer: auto
+    title: auto
+
     expectation: auto
     objective: auto
 

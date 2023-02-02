@@ -13,6 +13,7 @@ ALLOWED_HOSTS = [
     "dev.nidhoggr.net",
     "base.nidhoggr.net",
     "24.243.109.139",
+    "localhost",
 ]
 
 INSTALLED_APPS = [

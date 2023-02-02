@@ -1,0 +1,111 @@
+[
+    {
+        "model": "carescripts.lesson",
+        "pk": 8,
+        "fields": {
+            "name": "Mathematical Notions and Terminology",
+            "subject": 8
+        }
+    },
+    {
+        "model": "carescripts.skill",
+        "pk": 8,
+        "fields": {
+            "name": "Notation Interpretation"
+        }
+    },
+    {
+        "model": "carescripts.skill",
+        "pk": 9,
+        "fields": {
+            "name": "Notation Symbols"
+        }
+    },
+    {
+        "model": "carescripts.skill",
+        "pk": 10,
+        "fields": {
+            "name": "Set Theory"
+        }
+    },
+    {
+        "model": "carescripts.learningObjective",
+        "pk": 8,
+        "fields": {
+            "skill": 8,
+            "level": 1
+        }
+    },
+    {
+        "model": "carescripts.userSkill",
+        "pk": 9,
+        "fields": {
+            "skill": 9,
+            "level": 5
+        }
+    },
+    {
+        "model": "carescripts.expectation",
+        "pk": 8,
+        "fields": {
+            "skill": 9,
+            "level": 5
+        }
+    },
+    {
+        "model": "carescripts.mode",
+        "pk": 2,
+        "fields": {
+            "name": "True or False"
+        }
+    },
+     {
+        "model": "carescripts.mode",
+        "pk": 3,
+        "fields": {
+            "name": "Open ended"
+        }
+    },
+    {
+        "model": "carescripts.subject",
+        "pk": 8,
+        "fields": {
+            "name": "Discrete Mathematics"
+        }
+    },
+    {
+        "model": "carescripts.question",
+        "pk": 81,
+        "fields": {
+            "title": "Sets",
+            "text": "\nA set is an ordered list of numbers.\n",
+            "answer": "False",
+            "mode": 2,
+            "lesson": 8
+        }
+    },
+   {
+        "model": "carescripts.question",
+        "pk": 82,
+        "fields": {
+            "title": "Sets",
+            "text": "\nA set is composed of objects called members or elements. Sets can be members of other sets.\n",
+            "answer": "True",
+            "mode": 2,
+            "lesson": 8
+        }
+    },
+   {
+        "model": "carescripts.question",
+        "pk": 83,
+        "fields": {
+            "title": "Logic Notation",
+            "text": "\nWhat does the symbol ⊕ represent?\n",
+            "answer": "Exclusive OR",
+            "mode": 3,
+            "lesson": 8,
+            "expectation": 8,
+            "objective": 8
+        }
+    }
+]

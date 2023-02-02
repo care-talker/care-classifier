@@ -59,6 +59,7 @@ class Mode(models.Model):
 
 class Question(models.Model):
     text = models.CharField(max_length=250)
+    title = models.CharField(max_length=250)
     mode = models.ForeignKey(
         "Mode",
         blank=True,
