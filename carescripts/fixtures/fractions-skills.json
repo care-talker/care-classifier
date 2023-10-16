@@ -1,0 +1,44 @@
+[
+  {
+    "model": "carescripts.skill",
+    "pk": 30,
+    "fields": {
+      "name": "Multiplying Fractions"
+    }
+  },
+  {
+    "model": "carescripts.skill",
+    "pk": 31,
+    "fields": {
+      "name": "Dividing Fractions"
+    }
+  },
+  {
+    "model": "carescripts.skill",
+    "pk": 32,
+    "fields": {
+      "name": "Subtracting Fractions"
+    }
+  },
+  {
+    "model": "carescripts.skill",
+    "pk": 27,
+    "fields": {
+      "name": "Basic Understanding of Fractions"
+    }
+  },
+  {
+    "model": "carescripts.skill",
+    "pk": 28,
+    "fields": {
+      "name": "Recognizing Equivalent Fractions"
+    }
+  },
+  {
+    "model": "carescripts.skill",
+    "pk": 29,
+    "fields": {
+      "name": "Adding and Subtracting Fractions with Like Denominators"
+    }
+  }
+]

@@ -217,7 +217,6 @@ class UserSkill:
     id: auto
     level: auto
     skill: Skill
-    expectations: "Expectation"
 
 
 @strawberry_django.type(
@@ -263,7 +262,7 @@ class Lesson:
 )
 class Expectation:
     id: auto
-    skill: UserSkill
+    skill: Skill
     level: auto
     questions: "Question"
 
@@ -339,7 +338,6 @@ class UserSkillInput:
     id: auto
     level: auto
     skill: auto
-    expectations: auto
 
 
 @strawberry_django.input(models.Subject)

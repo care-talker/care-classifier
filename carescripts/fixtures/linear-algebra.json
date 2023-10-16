@@ -1,0 +1,90 @@
+[
+  {
+    "model": "carescripts.subject",
+    "pk": 6,
+    "fields": {
+      "name": "Linear Algebra"
+    }
+  },
+  {
+    "model": "carescripts.lesson",
+    "pk": 20,
+    "fields": {
+      "name": "Vectors and Matrices",
+      "subject": 6
+    }
+  },
+  {
+    "model": "carescripts.skill",
+    "pk": 25,
+    "fields": {
+      "name": "Matrix Operations"
+    }
+  },
+  {
+    "model": "carescripts.skill",
+    "pk": 26,
+    "fields": {
+      "name": "Vector Arithmetic"
+    }
+  },
+  {
+    "model": "carescripts.expectation",
+    "pk": 31,
+    "fields": {
+      "skill": 25,
+      "level": 2
+    }
+  },
+  {
+    "model": "carescripts.learningobjective",
+    "pk": 32,
+    "fields": {
+      "skill": 25,
+      "level": 3
+    }
+  },
+  {
+    "model": "carescripts.mode",
+    "pk": 4,
+    "fields": {
+      "name": "Multiple Choice"
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 50,
+    "fields": {
+      "title": "Matrix Multiplication",
+      "text": "If A is a 2x3 matrix and B is a 3x2 matrix, what is the dimension of the result of the multiplication A * B?",
+      "answer": "2x2",
+      "mode": 4,
+      "lesson": 20,
+      "expectation": 31,
+      "objective": 32
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 51,
+    "fields": {
+      "title": "Vector Addition",
+      "text": "If vector V has coordinates (2, 3) and vector W has coordinates (-1, 2), what is the result of V + W?",
+      "answer": "(1, 5)",
+      "mode": 4,
+      "lesson": 20,
+      "expectation": 31,
+      "objective": 32
+    }
+  },
+  {
+    "model": "carescripts.assignment",
+    "pk": 60,
+    "fields": {
+      "releaseDate": "2023-10-10",
+      "dueDate": "2023-10-20",
+      "closeDate": "2023-10-30",
+      "lesson": 20
+    }
+  }
+]

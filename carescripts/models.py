@@ -33,7 +33,7 @@ class Lesson(models.Model):
 
 class Expectation(models.Model):
     skill = models.ForeignKey(
-        "UserSkill",
+        "Skill",
         blank=True,
         null=True,
         related_name="expectations",
