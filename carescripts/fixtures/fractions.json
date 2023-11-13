@@ -1,0 +1,188 @@
+[
+  {
+    "model": "carescripts.lesson",
+    "pk": 22,
+    "fields": {
+      "name": "Fraction Arithmetic",
+      "subject": 1
+    }
+  },
+  {
+    "model": "carescripts.expectation",
+    "pk": 40,
+    "fields": {
+      "skill": 27,
+      "level": 2
+    }
+  },
+  {
+    "model": "carescripts.expectation",
+    "pk": 41,
+    "fields": {
+      "skill": 28,
+      "level": 1
+    }
+  },
+  {
+    "model": "carescripts.expectation",
+    "pk": 42,
+    "fields": {
+      "skill": 29,
+      "level": 2
+    }
+  },
+  {
+    "model": "carescripts.learningobjective",
+    "pk": 45,
+    "fields": {
+      "skill": 30,
+      "level": 1
+    }
+  },
+  {
+    "model": "carescripts.learningobjective",
+    "pk": 46,
+    "fields": {
+      "skill": 31,
+      "level": 1
+    }
+  },
+  {
+    "model": "carescripts.learningobjective",
+    "pk": 47,
+    "fields": {
+      "skill": 32,
+      "level": 1
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 60,
+    "fields": {
+      "title": "Understanding Basic Fractions",
+      "text": "Which fraction represents half of a whole? Choices: A) 1/3, B) 1/2, C) 1/4, D) 2/3",
+      "answer": "B) 1/2",
+      "mode": 4,
+      "lesson": 22,
+      "expectation": 40,
+      "objective": 45
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 61,
+    "fields": {
+      "title": "Simplifying Fractions",
+      "text": "What is the simplest form of 4/8? Choices: A) 1/3, B) 1/2, C) 2/8, D) 3/8",
+      "answer": "B) 1/2",
+      "mode": 4,
+      "lesson": 22,
+      "expectation": 41,
+      "objective": 46
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 62,
+    "fields": {
+      "title": "Adding Like Fractions",
+      "text": "What is 1/4 + 2/4? Choices: A) 1/8, B) 3/8, C) 3/4, D) 1/2",
+      "answer": "C) 3/4",
+      "mode": 4,
+      "lesson": 22,
+      "expectation": 42,
+      "objective": 47
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 63,
+    "fields": {
+      "title": "Multiplying Fractions",
+      "text": "What is 2/3 * 3/4? Choices: A) 1/2, B) 5/12, C) 6/12, D) 1/4",
+      "answer": "B) 5/12",
+      "mode": 4,
+      "lesson": 22,
+      "expectation": 40,
+      "objective": 45
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 64,
+    "fields": {
+      "title": "Dividing Fractions",
+      "text": "What is 3/4 ÷ 1/2? Choices: A) 1/6, B) 1/3, C) 3/8, D) 3/2",
+      "answer": "D) 3/2",
+      "mode": 4,
+      "lesson": 22,
+      "expectation": 41,
+      "objective": 46
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 65,
+    "fields": {
+      "title": "Subtracting Fractions",
+      "text": "What is 3/4 - 1/4? Choices: A) 1/4, B) 1/2, C) 2/4, D) 3/4",
+      "answer": "B) 1/2",
+      "mode": 4,
+      "lesson": 22,
+      "expectation": 42,
+      "objective": 47
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 66,
+    "fields": {
+      "title": "Understanding Mixed Numbers",
+      "text": "Which fraction is equivalent to 1 1/2? Choices: A) 3/2, B) 2/3, C) 4/2, D) 5/2",
+      "answer": "A) 3/2",
+      "mode": 4,
+      "lesson": 22,
+      "expectation": 40,
+      "objective": 45
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 67,
+    "fields": {
+      "title": "Comparing Fractions",
+      "text": "Which fraction is greater, 2/3 or 3/4? Choices: A) 2/3, B) 3/4, C) They are equal, D) Cannot be determined",
+      "answer": "B) 3/4",
+      "mode": 4,
+      "lesson": 22,
+      "expectation": 41,
+      "objective": 46
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 68,
+    "fields": {
+      "title": "Simplifying to Lowest Terms",
+      "text": "Which is the lowest term for 6/9? Choices: A) 2/3, B) 6/9, C) 3/6, D) 1/2",
+      "answer": "A) 2/3",
+      "mode": 4,
+      "lesson": 22,
+      "expectation": 42,
+      "objective": 47
+    }
+  },
+  {
+    "model": "carescripts.question",
+    "pk": 69,
+    "fields": {
+      "title": "Converting Fractions to Decimals",
+      "text": "What is 1/4 as a decimal? Choices: A) 0.14, B) 0.25, C) 0.4, D) 0.5",
+      "answer": "B) 0.25",
+      "mode": 4,
+      "lesson": 22,
+      "expectation": 40,
+      "objective": 45
+    }
+  }
+]
