@@ -25,68 +25,51 @@ class UserInput:
 class SkillFilter:
     id: auto
     name: auto
-    userskills: "UserSkillFilter"
-    learningobjectives: "LearningObjectiveFilter"
 
 
 @strawberry_django.filters.filter(models.UserSkill, lookups=True)
 class UserSkillFilter:
     id: auto
     level: auto
-    skill: SkillFilter
-    expectations: "ExpectationFilter"
 
 
 @strawberry_django.filters.filter(models.Subject, lookups=True)
 class SubjectFilter:
     id: auto
     name: auto
-    lessons: "LessonFilter"
 
 
 @strawberry_django.filters.filter(models.Lesson, lookups=True)
 class LessonFilter:
     id: auto
     name: auto
-    subject: SubjectFilter
-    questions: "QuestionFilter"
-    assignments: "AssignmentFilter"
 
 
 @strawberry_django.filters.filter(models.Expectation, lookups=True)
 class ExpectationFilter:
     id: auto
-    skill: UserSkillFilter
     level: auto
-    questions: "QuestionFilter"
 
 
 @strawberry_django.filters.filter(models.LearningObjective, lookups=True)
 class LearningObjectiveFilter:
     id: auto
-    skill: SkillFilter
     level: auto
-    questions: "QuestionFilter"
 
 
 @strawberry_django.filters.filter(models.Mode, lookups=True)
 class ModeFilter:
     id: auto
     name: auto
-    questions: "QuestionFilter"
 
 
 @strawberry_django.filters.filter(models.Question, lookups=True)
 class QuestionFilter:
     id: auto
     text: auto
-    mode: ModeFilter
     lesson: LessonFilter
     answer: auto
     title: auto
-
-    expectation: ExpectationFilter
-    objective: LearningObjectiveFilter
 
 
 @strawberry_django.filters.filter(models.Assignment, lookups=True)
@@ -95,22 +78,17 @@ class AssignmentFilter:
     releaseDate: auto
     dueDate: auto
     closeDate: auto
-    lesson: LessonFilter
-    userassignments: "UserAssignmentFilter"
 
 
 @strawberry_django.filters.filter(models.UserAssignment, lookups=True)
 class UserAssignmentFilter:
     id: auto
     complete: auto
-    assignment: AssignmentFilter
-    sessions: "SessionFilter"
 
 
 @strawberry_django.filters.filter(models.Session, lookups=True)
 class SessionFilter:
     id: auto
-    userAssignment: UserAssignmentFilter
     startDate: auto
     endDate: auto
 

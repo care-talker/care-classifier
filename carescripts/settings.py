@@ -19,6 +19,7 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
+    "corsheaders",
     "django.contrib.sessions",
     "strawberry.django",
     "carescripts",
@@ -29,6 +30,8 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -75,3 +78,5 @@ DATABASES = {
 }
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+
+CORS_ALLOW_ALL_ORIGINS = True

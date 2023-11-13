@@ -11,8 +11,8 @@ output = open("schema.py", "w")
 queries = []
 mutations = []
 
-queryTemplate = """    {name}: {item} = strawberry_django.field()
-    {name}s: List[{item}] = strawberry_django.field()\n"""
+queryTemplate = """    {name}: {item} = strawberry.django.field()
+    {name}s: List[{item}] = strawberry.django.field()\n"""
 mutationTemplate = """    create{item}: {item} = mutations.create({item}PartialInput)
     create{item}s: List[{item}] = mutations.create({item}PartialInput)
     update{item}s: List[{item}] = mutations.update({item}PartialInput)
